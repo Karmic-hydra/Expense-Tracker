@@ -1,0 +1,418 @@
+/* Input field style */
+.input {
+  color: white;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 1900px;
+  margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+/* Title style */
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: white;
+  margin: 20px auto; 
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+  font-size: 25rem; /* Increased font size for the heading */
+}
+
+.codepen-button::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 400%;
+height: 100%;
+background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+background-size: 25% 100%;
+animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+animation-play-state: paused;
+translate: -5% 0%;
+transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+animation-play-state: running;
+transition-duration: 0.75s;
+translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+to {
+  transform: translateX(-25%);
+}
+}
+
+.codepen-button span {
+position: relative;
+display: block;
+padding: 2rem 3.5rem;
+font-size: 2.5rem;
+background: #000;
+border-radius: 3px;
+height: 100%;
+} 
+
+/* Add Expense button style */
+.btn-conteiner {
+display: flex;
+justify-content: center;
+margin-top: 80px; /* Added margin */
+--color-text: #ffffff;
+--color-background: #ff135a;
+--color-outline: #ff145b80;
+--color-shadow: #00000080;
+}
+
+.btn-content {
+display: flex;
+align-items: center;
+padding: 5px 30px;
+text-decoration: none;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 30px;
+color: var(--color-text);
+background: var(--color-background);
+transition: 1s;
+border-radius: 100px;
+box-shadow: 0 0 0.2em 0 var(--color-background);
+border: none; /* Removed default button border */
+}
+
+.btn-content:hover, .btn-content:focus {
+transition: 0.5s;
+-webkit-animation: btn-content 1s;
+animation: btn-content 1s;
+outline: 0.1em solid transparent;
+outline-offset: 0.2em;
+box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+transition: 0.5s;
+margin-right: 0px;
+transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+transition: 0.5s;
+margin-right: 5px;
+}
+
+.icon-arrow {
+width: 20px;
+margin-left: 15px;
+position: relative;
+top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+transition: 0.4s;
+transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+transition: 0.5s;
+transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+transform: translateX(0%);
+animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+transform: translateX(0%);
+animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+0% {
+  fill: white;
+}
+
+50% {
+  fill: var(--color-background);
+}
+
+100% {
+  fill: white;
+}
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+0% {
+  outline: 0.2em solid var(--color-background);
+  outline-offset: 0;
+}
+}
+
+@keyframes btn-content {
+0% {
+  outline: 0.2em solid var(--color-background);
+  outline-offset: 0;
+}
+}
+
+/* Done button style */
+.continue-application {
+--color: #fff;
+--background: #9bb54b;
+--background-hover: #3A4059;
+--background-left: #2B3044;
+--folder: #F3E9CB;
+--folder-inner: #BEB393;
+--paper: #FFFFFF;
+--paper-lines: #BBC1E1;
+--paper-behind: #E1E6F9;
+--pencil-cap: #fff;
+--pencil-top: #84fe27;
+--pencil-middle: #fff;
+--pencil-bottom: #5C86FF;
+--shadow: rgba(13, 15, 25, .2);
+border: none;
+outline: none;
+cursor: pointer;
+position: relative;
+border-radius: 5px;
+font-size: 14px;
+font-weight: 500;
+line-height: 19px;
+-webkit-appearance: none;
+-webkit-tap-highlight-color: transparent;
+padding: 19px 29px 17px 69px;
+transition: background 0.3s;
+color: var(--color);
+background: var(--bg, var(--background));
+margin-top: 25px; /* Added margin */
+}
+
+.continue-application > div {
+top: 0;
+left: 0;
+bottom: 0;
+width: 53px;
+position: absolute;
+overflow: hidden;
+border-radius: 5px 0 0 5px;
+background: var(--background-left);
+}
+
+.continue-application > div .folder {
+width: 23px;
+height: 27px;
+position: absolute;
+left: 15px;
+top: 13px;
+}
+
+.continue-application > div .folder .top {
+left: 0;
+top: 0;
+z-index: 2;
+position: absolute;
+transform: translateX(var(--fx, 0));
+transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder .top svg {
+width: 24px;
+height: 27px;
+display: block;
+fill: var(--folder);
+transform-origin: 0 50%;
+transition: transform 0.3s ease var(--fds, 0.45s);
+transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application > div .folder:before, .continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+content: "";
+position: absolute;
+left: var(--l, 0);
+top: var(--t, 0);
+width: var(--w, 100%);
+height: var(--h, 100%);
+border-radius: 1px;
+background: var(--b, var(--folder-inner));
+}
+
+.continue-application > div .folder:before {
+box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+transform: translateX(var(--fx, 0));
+transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+--l: 1px;
+--t: 1px;
+--w: 21px;
+--h: 25px;
+--b: var(--paper-behind);
+}
+
+.continue-application > div .folder:after {
+transform: translate(var(--pbx, 0), var(--pby, 0));
+transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .folder .paper {
+z-index: 1;
+--b: var(--paper);
+}
+
+.continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+content: "";
+width: var(--wp, 14px);
+height: 2px;
+border-radius: 1px;
+transform: scaleY(0.5);
+left: 3px;
+top: var(--tp, 3px);
+position: absolute;
+background: var(--paper-lines);
+box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application > div .folder .paper:after {
+--tp: 6px;
+--wp: 10px;
+}
+
+.continue-application > div .pencil {
+height: 2px;
+width: 3px;
+border-radius: 1px 1px 0 0;
+top: 8px;
+left: 105%;
+position: absolute;
+z-index: 3;
+transform-origin: 50% 19px;
+background: var(--pencil-cap);
+transform: translateX(var(--pex, 0)) rotate(35deg);
+transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .pencil:before, .continue-application > div .pencil:after {
+content: "";
+position: absolute;
+display: block;
+background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+width: var(--w, 5px);
+height: var(--h, 20px);
+border-radius: var(--br, 2px 2px 0 0);
+top: var(--t, 2px);
+left: var(--l, -1px);
+}
+
+.continue-application > div .pencil:before {
+-webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application > div .pencil:after {
+--b: none;
+--w: 3px;
+--h: 6px;
+--br: 0 2px 1px 0;
+--t: 3px;
+--l: 3px;
+border-top: 1px solid var(--pencil-top);
+border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before, .continue-application:after {
+content: "";
+position: absolute;
+width: 10px;
+height: 2px;
+border-radius: 1px;
+background: var(--color);
+transform-origin: 9px 1px;
+transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+top: 26px;
+right: 16px;
+transition: transform 0.3s;
+}
+
+.continue-application:after {
+--r: 45deg;
+}
+
+.continue-application:hover {
+--cx: 2px;
+--bg: var(--background-hover);
+--fx: -40px;
+--fr: -60deg;
+--fd: .15s;
+--fds: 0s;
+--pbx: 3px;
+--pby: -3px;
+--pbd: .15s;
+--pex: -24px;
+}
+
+/* Basic table styling */
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Body and layout styles */
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+/* Style for the suggestions text */
+.suggestions-text {
+  font-size: 1.2rem; /* Increased font size for the suggestions */
+}
